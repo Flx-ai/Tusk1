@@ -8,7 +8,7 @@ public class Main {
         double cat1 = readValue();
         double cat2 = calcCat2(cat1);
 
-        logic(cat1,cat2);
+        followLogic(cat1,cat2);
     }
 
     static double readValue() {
@@ -34,12 +34,12 @@ public class Main {
 
     static double calcAreaCircle(double radius) {
         double areaCircle = Math.PI * radius * radius;
-        System.out.printf("Площадь круга = %2$.2f%n",  areaCircle);
+        System.out.printf("Площадь круга = %1$.2f%n", areaCircle);
         return areaCircle;
     }
 
-    static double calcSideSquare(double r) {
-        double sideSquare = 2 * r;
+    static double calcSideSquare(double radius) {
+        double sideSquare = 2 * radius;
         return sideSquare;
     }
 
@@ -54,11 +54,11 @@ public class Main {
         return diffAreas;
     }
 
-    static void logic(double cat1,double cat2){
-        double c = calcHypot(cat1, cat2);
-        double r = calcRadius(c);
-        double areaCircle = calcAreaCircle(r);
-        double sideSquare = calcSideSquare(r);
+    static void followLogic(double cat1,double cat2){
+        double hypot = calcHypot(cat1, cat2);
+        double radius = calcRadius(hypot);
+        double areaCircle = calcAreaCircle(radius);
+        double sideSquare = calcSideSquare(radius);
         double areaSquare = calcAreaSquare(sideSquare);
         double diffAreas = calcAreaPaintedPart(areaSquare, areaCircle);
     }
