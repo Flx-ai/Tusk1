@@ -52,7 +52,7 @@ public class Main {
         return diffAreas;
     }
 
-    static void followLogic(double cat1,double cat2){
+    static void followLogic(double cat1,double cat2) {
         double hypot = calcHypot(cat1, cat2);
         double radius = calcRadius(hypot);
         double areaCircle = calcAreaCircle(radius);
