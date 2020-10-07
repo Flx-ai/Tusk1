@@ -1,4 +1,5 @@
 package vsu.cs.ru.num15;
+
 import java.util.Scanner;
 
 public class Main {
@@ -23,13 +24,11 @@ public class Main {
     }
 
     static double calcHypot(double cat1, double cat2) {
-        double hypot = Math.sqrt(cat1 * cat1 + cat2 * cat2);
-        return hypot;
+        return Math.sqrt(cat1 * cat1 + cat2 * cat2);
     }
 
     static double calcRadius(double hypot) {
-        double radius = hypot/2;
-        return radius;
+         return hypot/2;
     }
 
     static double calcAreaCircle(double radius) {
@@ -39,13 +38,12 @@ public class Main {
     }
 
     static double calcSideSquare(double radius) {
-        double sideSquare = 2 * radius;
-        return sideSquare;
+      return radius * 2;
+
     }
 
     static double calcAreaSquare(double sideSquare) {
-        double areaSquare = sideSquare * sideSquare;
-        return areaSquare;
+        return sideSquare * sideSquare;
     }
 
     static double calcAreaPaintedPart(double areaSquare, double areaCircle) {
